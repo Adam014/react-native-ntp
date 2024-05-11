@@ -1,6 +1,6 @@
 "use strict";
 
-import * as dgram from "dgram";
+import dgram from 'react-native-udp'
 import { NtpPacket, NtpPacketParser } from "ntp-packet-parser";
 import { NtpTimeResult } from "./NtpTimeResult";
 import { RecursivePartial } from "./RecursivePartial";
@@ -340,7 +340,7 @@ export class NtpTimeSync {
 
   getNetworkTime(server: string, port = 123): Promise<NtpReceivedPacket> {
     return new Promise((resolve, reject) => {
-      const client = dgram.createSocket("udp4");
+      const client = dgram.createSocket('udp4');
       let hasFinished = false;
 
       const errorCallback = (err: Error) => {

@@ -4,7 +4,8 @@
   "description": "Fetches the current time from NTP servers and returns offset information",
   "main": "dist/index.js",
   "dependencies": {
-    "ntp-packet-parser": "^0.4.0"
+    "ntp-packet-parser": "^0.4.0",
+    "react-native-udp": "^4.1.7"
   },
   "devDependencies": {
     "@types/node": "^14 || ^16 || ^18 || ^20",
